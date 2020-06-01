@@ -1,17 +1,17 @@
 {% set name = "oslo.log" %}
-{% set version = "4.1.1" %}
+{% set version = "4.2.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 22bf26492222de2a2ee346ab62701fd12cd01bba733fb14e6c070300c3f96da8
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 309a856284a6b66d47f46d41ac42f8c422f09b9b0735da02749aab9f4dad39ee
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - convert-json = oslo_log.cmds.convert_json:main
 
