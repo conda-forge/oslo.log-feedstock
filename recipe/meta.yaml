@@ -10,7 +10,7 @@ source:
   sha256: 0883be3099cd9f8e17843b574018627e1d64243aabcf6cdbe1ebdd1cb5784448
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - convert-json = oslo_log.cmds.convert_json:main
