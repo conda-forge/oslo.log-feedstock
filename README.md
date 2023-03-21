@@ -1,11 +1,11 @@
-About oslo.log
-==============
+About oslo.log-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/oslo.log-feedstock/blob/main/LICENSE.txt)
 
 Home: https://docs.openstack.org/oslo.log/latest/
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/oslo.log-feedstock/blob/main/LICENSE.txt)
 
 Summary: A library provides standardized configuration for all openstack projects
 
