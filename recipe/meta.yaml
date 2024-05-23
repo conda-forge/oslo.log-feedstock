@@ -14,23 +14,21 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - convert-json = oslo_log.cmds.convert_json:main
-  skip: true  # [py < 38]
+  noarch: python
 
 requirements:
   host:
     - pbr >=3.1.1
     - pip
-    - python
+    - python >=3.8
   run:
-    - python
+    - python >=3.8
     - pbr >=3.1.1
     - oslo.config >=5.2.0
-    - oslo.context >=2.20.0
+    - oslo.context >=2.21.0
     - oslo.i18n >=3.20.0
     - oslo.utils >=3.36.0
     - oslo.serialization >=2.25.0
-    - debtcollector >=1.19.0
-    - pyinotify >=0.9.6  # [linux]
     - python-dateutil >=2.7.0
 
 test:
