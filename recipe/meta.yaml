@@ -1,5 +1,5 @@
 {% set name = "oslo.log" %}
-{% set version = "5.5.1" %}
+{% set version = "6.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,30 +7,28 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 484148512c5db2a8b35c83cd997e9953755fd8bfa8aaf6ee0cc8c7aeb7429210
+  sha256: 89f0d6fa2cba8281f89b508a7fe49bfb97daaf55c5278187d45a3069971e687f
 
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - convert-json = oslo_log.cmds.convert_json:main
-  skip: true  # [py < 38]
+  noarch: python
 
 requirements:
   host:
     - pbr >=3.1.1
     - pip
-    - python
+    - python >=3.8
   run:
-    - python
+    - python >=3.8
     - pbr >=3.1.1
     - oslo.config >=5.2.0
-    - oslo.context >=2.20.0
+    - oslo.context >=2.21.0
     - oslo.i18n >=3.20.0
     - oslo.utils >=3.36.0
     - oslo.serialization >=2.25.0
-    - debtcollector >=1.19.0
-    - pyinotify >=0.9.6  # [linux]
     - python-dateutil >=2.7.0
 
 test:
