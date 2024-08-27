@@ -1,5 +1,5 @@
 {% set name = "oslo.log" %}
-{% set version = "6.1.1" %}
+{% set version = "6.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e35a12cfe4cad13ffb0aeda99fcca20a705d0f694a84c2ef7b07b45960f88fb4
+  sha256: f768047df9d706c484dd6665dcbbea289021d48cb7ce5abf7a1f69a09491f5fe
 
 build:
   number: 0
@@ -21,6 +21,7 @@ requirements:
     - pbr >=3.1.1
     - pip
     - python >=3.8
+    - setuptools
   run:
     - python >=3.8
     - pbr >=3.1.1
