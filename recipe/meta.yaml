@@ -1,5 +1,5 @@
 {% set name = "oslo.log" %}
-{% set version = "6.2.0" %}
+{% set version = "7.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2b151d9c3f2b2ecc12c06d0fb7dbf2e9047afdaec3644827fa1e10b354369563
+  sha256: eaca57fbd8a3d437cae32bac133101d22135abfc4fe6940d3db1b97f4facc16a
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - convert-json = oslo_log.cmds.convert_json:main
