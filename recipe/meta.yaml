@@ -1,5 +1,5 @@
 {% set name = "oslo.log" %}
-{% set version = "7.1.0" %}
+{% set version = "7.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/oslo_log-{{ version }}.tar.gz
-  sha256: 9a2b3c18be6f59152dfe25f34deabe71343db7fb8248a633967fb6a04707629d
+  sha256: 963fa3d08f9ab34efc8c8cb2217bb48a78538a6d3a4688905b4efb123a303cea
 
 build:
   number: 0
@@ -31,6 +31,7 @@ requirements:
     - oslo.utils >=3.36.0
     - oslo.serialization >=2.25.0
     - python-dateutil >=2.7.0
+    - typing-extensions
 
 test:
   requires:
