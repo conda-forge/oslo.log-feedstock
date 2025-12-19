@@ -1,5 +1,5 @@
 {% set name = "oslo.log" %}
-{% set version = "7.2.1" %}
+{% set version = "8.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/oslo_log-{{ version }}.tar.gz
-  sha256: 01aebabdcf06b62df00e479db99df0c23f6cd24c6500ab3110e604bd059fa8d5
+  sha256: d3e0c67a509fca99e9b76eaedcb2fa8c5a1140659de8a50d5a4df6a3fa933227
 
 build:
   number: 0
