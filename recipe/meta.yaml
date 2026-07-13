@@ -1,5 +1,7 @@
 {% set name = "oslo.log" %}
 {% set version = "8.3.0" %}
+{% set python_min = "3.11" %}
+
 
 package:
   name: {{ name|lower }}
